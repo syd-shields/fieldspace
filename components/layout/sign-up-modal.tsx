@@ -8,9 +8,8 @@ import {
   useMemo,
 } from "react";
 import { LoadingDots, Google } from "@/components/shared/icons";
-import Image from "next/image";
 
-const SignInModal = ({
+const SignUpModal = ({
   showSignInModal,
   setShowSignInModal,
 }: {
@@ -23,9 +22,9 @@ const SignInModal = ({
     <Modal showModal={showSignInModal} setShowModal={setShowSignInModal}>
       <div className="md:border-gray-200 w-full overflow-hidden shadow-xl md:max-w-md md:rounded-2xl md:border">
         <div className="border-gray-200 flex flex-col items-center justify-center space-y-3 border-b bg-white px-4 py-6 pt-8 text-center md:px-16">
-          <h3 className="font-display text-2xl font-bold">Log In</h3>
+          <h3 className="font-display text-2xl font-bold">Sign In</h3>
           <p className="text-gray-500 text-sm">
-            Log in and start using Fieldspace.
+            Sign in and start using Fieldspace.
           </p>
         </div>
 
@@ -57,20 +56,20 @@ const SignInModal = ({
   );
 };
 
-export function useSignInModal() {
-  const [showSignInModal, setShowSignInModal] = useState(false);
+export function useSignUpModal() {
+  const [showSignInModal, setShowSignUpModal] = useState(false);
 
   const SignInModalCallback = useCallback(() => {
     return (
-      <SignInModal
+      <SignUpModal
         showSignInModal={showSignInModal}
-        setShowSignInModal={setShowSignInModal}
+        setShowSignInModal={setShowSignUpModal}
       />
     );
-  }, [showSignInModal, setShowSignInModal]);
+  }, [showSignInModal, setShowSignUpModal]);
 
   return useMemo(
-    () => ({ setShowSignInModal, SignInModal: SignInModalCallback }),
-    [setShowSignInModal, SignInModalCallback],
+    () => ({ setShowSignUpModal, SignInModal: SignInModalCallback }),
+    [setShowSignUpModal, SignInModalCallback],
   );
 }

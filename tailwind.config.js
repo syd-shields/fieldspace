@@ -7,9 +7,18 @@ module.exports = {
     hoverOnlyWhenSupported: true,
   },
   theme: {
+    colors: {
+      white: "#FAFAFA",
+      "light-gray": "#D3D3D3",
+      "dark-gray": "#343434",
+      black: "#1E2321",
+      red: "#BD463E",
+      blue: "73A3D0",
+    },
     extend: {
       fontFamily: {
-        display: ["var(--font-sf)", "system-ui", "sans-serif"],
+        head: ["var(--font-work)", "system-ui", "sans-serif"],
+        display: ["var(--font-josefin)", "system-ui", "sans-serif"],
         default: ["var(--font-inter)", "system-ui", "sans-serif"],
       },
       animation: {
