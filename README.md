@@ -1,6 +1,4 @@
-<a href="https://precedent.dev">
-  <h1 align="center">Fieldspace</h1>
-</a>
+<h1 align="center">Fieldspace</h1>
 
 <p align="center">
   Ideation platform, experimenting with spaciousness and anti-hostile experiences.
